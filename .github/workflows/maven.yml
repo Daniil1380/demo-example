@@ -47,9 +47,8 @@ jobs:
         run: mvn test
 
       - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v4.1.6
+        uses: TimonVS/deploy-to-heroku@v2
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "YOUR_HEROKU_APP_NAME"    
-          heroku_email: "YOUR_HEROKU_ACCOUNT_EMAIL"  
-          process_type: web
+          heroku_app_name: "YOUR_HEROKU_APP_NAME"   
+          heroku_email: "YOUR_HEROKU_ACCOUNT_EMAIL"
