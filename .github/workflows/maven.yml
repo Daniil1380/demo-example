@@ -47,8 +47,9 @@ jobs:
         run: mvn test
 
       - name: Deploy to Heroku
-        uses: zambie/heroku-deploy@v3
+        uses: akhileshns/heroku-deploy@v4.1.6
         with:
-          api-key: ${{ secrets.HEROKU_API_KEY }}
-          app-name: ${{ secrets.HEROKU_APP_NAME }}
-          username: ${{ secrets.HEROKU_USERNAME }}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "YOUR_HEROKU_APP_NAME"    
+          heroku_email: "YOUR_HEROKU_ACCOUNT_EMAIL"  
+          process_type: web
