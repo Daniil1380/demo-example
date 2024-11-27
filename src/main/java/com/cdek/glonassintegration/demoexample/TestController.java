@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${a.b.c}")
-    private String a;
+    private AppService appService;
+
+    public TestController(AppService appService) {
+        this.appService = appService;
+    }
 
     @GetMapping(value = "/hello")
     public String hello() {
-        return a;
+        return appService.sayHello();
     }
 
 }
