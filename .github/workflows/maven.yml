@@ -45,3 +45,10 @@ jobs:
         
       - name: Run tests
         run: mvn test
+
+      - name: Deploy to Heroku
+        uses: zambie/heroku-deploy@v3
+        with:
+          api-key: ${{ secrets.HEROKU_API_KEY }}
+          app-name: ${{ secrets.HEROKU_APP_NAME }}
+          username: ${{ secrets.HEROKU_USERNAME }}
