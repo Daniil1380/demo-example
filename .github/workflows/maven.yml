@@ -63,4 +63,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: daniil1380/my-image:latest
+          tags: tkachenkod/my-image:latest
