@@ -63,4 +63,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-image:latest
+          tags: daniil1380/my-image:latest
